@@ -1,0 +1,20 @@
+<ion-view title="{{title}}">
+  <ion-content class="has-header">
+  	<div class="list card show">
+  		<div class="item item-body">
+	    	<h1>{{title}}</h1>
+	    	<div ng-bind-html="post.content"></div>
+	    </div>
+	    <div class="item tabs tabs-secondary tabs-icon-left">
+	        <a class="tab-item" href="http://www.facebook.com/sharer.php?s=100&p[url]={{post.link}}&p[images][0]={{post.image_thumb_url}}&p[title]={{post.title}}&p[summary]={{post.short_description}}">
+	          <i class="icon ion-social-facebook"></i>
+	          Share
+	        </a>
+	        <a class="tab-item" href="http://twitter.com/share?text={{post.title}}&url={{post.link}}&hashtags=warungsatekamu">
+	          <i class="icon ion-social-twitter"></i>
+	          Tweet
+	        </a>
+	      </div>
+	</div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view title="Warung Sate Kamu">
+  <ion-content class="has-header">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="list card" ng-repeat="page in $storage.pages" href="#/page/{{page.id}}">
+
+      <div class="item item-avatar">
+        <img ng-src="{{page.image_thumb_url}}">
+        <a href="#/page/{{page.title}}"><h2>{{page.title}}</h2></a>
+        <p>{{page.date}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{page.image_url}}">
+        <p>
+          {{page.short_description}}
+        </p>
+      </div>
+
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="http://www.facebook.com/sharer.php?s=100&p[url]={{page.link}}&p[images][0]={{page.image_thumb_url}}&p[title]={{page.title}}&p[summary]={{page.short_description}}">
+          <i class="icon ion-social-facebook"></i>
+          Share
+        </a>
+        <a class="tab-item" href="http://twitter.com/share?text={{page.title}}&url={{page.link}}&hashtags=warungsatekamu">
+          <i class="icon ion-social-twitter"></i>
+          Tweet
+        </a>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
