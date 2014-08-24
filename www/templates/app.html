@@ -8,7 +8,7 @@
 
       <div class="item item-avatar">
         <img ng-src="{{page.image_thumb_url}}">
-        <a href="#/page/{{page.title}}"><h2>{{page.title}}</h2></a>
+        <a href="#/page/{{page.title.replace('?', '%3F').replace('&', '%26')}}"><h2>{{page.title}}</h2></a>
         <p>{{page.date}}</p>
       </div>
 
